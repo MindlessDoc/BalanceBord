@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BoardController : MonoBehaviour
@@ -27,5 +28,13 @@ public class BoardController : MonoBehaviour
     {
         _rigidbody2D.AddForceAtPosition(-transform.up * _downForceValue, _renderer.bounds.max);
         _rigidbody2D.AddForce(transform.right * _horizontalForceValue);
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Earth")
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
