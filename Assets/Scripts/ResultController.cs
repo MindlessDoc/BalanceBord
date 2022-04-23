@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class ResultController : MonoBehaviour
 {
-    [SerializeField] private Text _timerText;
+    private Text _timerText;
 
     private void Awake()
     {
         _timerText = GetComponent<Text>();
-        _timerText.text = PlayerPrefs.GetString("timer");
+        _timerText.text = PlayerPrefs.GetFloat("timer").ToString();
     }
 }

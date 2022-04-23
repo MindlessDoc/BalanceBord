@@ -17,6 +17,6 @@ public class TimerController : MonoBehaviour
     {
         _timer += Time.deltaTime;
         _timerText.text = Math.Round(_timer, 2).ToString();
-        PlayerPrefs.SetString("timer", _timerText.text);
+        PlayerPrefs.SetFloat("timer", (float)Math.Round(_timer, 2));
     }
 }

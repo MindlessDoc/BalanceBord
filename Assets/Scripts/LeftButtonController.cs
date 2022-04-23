@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LeftButtonController : MonoBehaviour
 {
     [SerializeField] private BoardController _boardController;
-    
+
     private bool _leftPressed = false;
-    
+
     public void OnLeftDown()
     {
         _leftPressed = true;
