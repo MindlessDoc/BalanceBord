@@ -8,7 +8,7 @@ public class BoardController : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
     private Renderer _renderer;
-    
+
     [SerializeField] private float _downForceValue = 20;
     [SerializeField] private float _horizontalForceValue = 50;
 
